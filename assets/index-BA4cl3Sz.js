@@ -1,0 +1,1 @@
+import{j as s}from"./index-KknZlIUr.js";const e="_PdfImageEditor_1xn10_1",o="_desc_1xn10_8",d={PdfImageEditor:e,desc:o},r=()=>s.jsx("div",{className:d.PdfImageEditor,children:s.jsx("p",{className:d.desc,children:"Coming Soon..."})});export{r as default};
