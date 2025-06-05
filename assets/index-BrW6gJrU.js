@@ -1,0 +1,1 @@
+import{j as a}from"./index-DK0banNw.js";const c="_Card_1pz6v_1",l="_content_1pz6v_6",s={Card:c,content:l},r=n=>{let t=s.Card;n.containerClassName&&(t+=` ${n.containerClassName}`);let e=s.content;return n.contentClassName&&(e+=` ${n.contentClassName}`),a.jsx("div",{className:t,children:a.jsx("div",{className:e,children:n.children})})};export{r as C};
