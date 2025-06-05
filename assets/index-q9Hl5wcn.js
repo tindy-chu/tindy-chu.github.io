@@ -1,1 +1,0 @@
-import{u as o,r as e,a as n,j as s}from"./index-Bvr7Ofjo.js";const a="_NotFound_kaj1q_1",c={NotFound:a},u=()=>{const t=o();return e.useEffect(()=>{t(n.setMenuKey(""))},[t]),s.jsx(s.Fragment,{children:s.jsx("div",{className:c.NotFound,children:s.jsx("h1",{children:"Page Not Found!"})})})};export{u as default};
