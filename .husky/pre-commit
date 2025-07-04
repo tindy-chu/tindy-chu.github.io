@@ -1,0 +1,21 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+. "./scripts/checkUnstaged.sh"
+. "./scripts/lintCss.sh"
+. "./scripts/lintJs.sh"
+. "./scripts/lintAll.sh"
+
+FILES=$(git diff --cached --name-only --diff-filter=ACM)
+
+CSS_FILES=$(echo "$FILES" | grep -E "\.(css|scss)$" || echo "")
+JS_FILES=$(echo "$FILES" | grep -E "\.(js|jsx|ts|tsx)$" || echo "")
+ALL_FILES=$(echo "$FILES" | grep -E "\.(css|scss|cjs|js|jsx|ts|tsx|json|md)$" || echo "")
+
+[ -n "$ALL_FILES" ] && checkUnstaged "$ALL_FILES"
+
+[ -n "$CSS_FILES" ] && lintCss "$CSS_FILES"
+[ -n "$JS_FILES" ] && lintJs "$JS_FILES"
+[ -n "$ALL_FILES" ] && lintAll "$ALL_FILES"
+
+echo "\033[42m pre-commit done \033[0m"
